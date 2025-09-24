@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking | Tattoo Stories India</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">Tattoo Stories India</a></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="studio.html">Studio</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- ===== BOOKING HERO (with form inside) ===== -->
+<section class="booking-hero">
+  <div class="booking-overlay"></div>
+  <div class="booking-content">
+    <h1>Ink Your Story</h1>
+    <p>Let’s turn your idea into something unforgettable.</p>
+
+    <!-- Move form here -->
+    <form class="booking-form">
+      <h2>Start Your Journey</h2>
+
+      <div class="form-group">
+        <input type="text" required placeholder=" " />
+        <label>Your Name</label>
+      </div>
+
+      <div class="form-group">
+        <input type="email" required placeholder=" " />
+        <label>Email Address</label>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" placeholder=" " />
+        <label>Phone Number</label>
+      </div>
+
+      <div class="form-group">
+        <select required>
+          <option disabled selected>Preferred Service</option>
+          <option>Custom</option>
+          <option>Pet</option>
+          <option>Body Piercing</option>
+          <option>Blackwork</option>
+          <option>Line Art</option>
+          <option>Geometry</option>
+          <option>Portrait</option>
+          <option>Religious</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <textarea rows="5" required placeholder=" "></textarea>
+        <label>Your Tattoo Idea</label>
+      </div>
+
+      <div class="form-group">
+        <input type="date" />
+        <label>Preferred Date</label>
+      </div>
+
+      <button type="submit">Request Booking</button>
+    </form>
+  </div>
+</section>
+
+
+  <!-- ===== CONFIRMATION MESSAGE ===== -->
+  <section class="booking-confirmation hidden">
+    <h2>Thank You!</h2>
+    <p>Your request has been received. We’ll reach out soon to discuss your idea and schedule your session.</p>
+  </section>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
