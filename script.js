@@ -51,6 +51,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2000);
   }
 
+  // === FAQ Accordion ===
+  const questions = document.querySelectorAll(".faq-question");
+
+  questions.forEach(q => {
+    q.addEventListener("click", () => {
+      const answer = q.nextElementSibling;
+
+      // Toggle active answer
+      if (answer.style.maxHeight) {
+        answer.style.maxHeight = null;
+        answer.style.padding = "0 15px";
+      } else {
+        document.querySelectorAll(".faq-answer").forEach(a => {
+          a.style.maxHeight = null;
+          a.style.padding = "0 15px";
+        });
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        answer.style.padding = "15px";
+      }
+    });
+  });
+
   // === Optional: Scroll-triggered fade-ins (future enhancement) ===
   // const fadeElements = document.querySelectorAll(".fade-in");
   // const observer = new IntersectionObserver(entries => {
@@ -63,3 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // fadeElements.forEach(el => observer.observe(el));
 });
+
+
+
+EVERY TATTOO TELLS A STORY- I INK YOURS
