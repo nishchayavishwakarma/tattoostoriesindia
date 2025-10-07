@@ -15,7 +15,7 @@
   
   <style>
     html { scroll-behavior: smooth; } /* enables smooth scroll */
-    section { padding: 80px 20px; }
+    section { padding: 80px 0px; }
     section h2 { margin-bottom: 20px; text-align: center; }
     .preview { text-align: center; margin-top: 20px; }
     .btn { display: inline-block; margin-top: 10px; }
@@ -31,13 +31,7 @@
       <a href="index.html">Tattoo Stories India</a>
       </div>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="studio.html">Studio</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="booking.html">Booking</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="#blog">Blog</a></li>
+        
       </ul>
     </nav>
   </header>
@@ -46,7 +40,7 @@
 <section id="home" class="hero">
   <div class="overlay"></div>
   <div class="hero-content">
-    <h1>Every tattoo tells a story - I ink yours</h1>
+    <h1>every tattoo tells a story- i ink your</h1>
     <!-- New Tattoo | Piercing Buttons -->
     <div class="toggle-buttons">
       <a href="#radio" class="btn-toggle">Tattoo</a>
@@ -82,6 +76,10 @@
       <div class="portfolio-item"><img src="assets/images/homepagepic/mp3.jpg" alt="Tattoo 3"></div>
       <div class="portfolio-item"><img src="assets/images/homepagepic/mp4.jpg" alt="Tattoo 4"></div>
       <div class="portfolio-item"><img src="assets/images/homepagepic/mp5.jpg" alt="Tattoo 5"></div>
+      <div class="portfolio-item"><img src="assets/images/homepagepic/mp7.jpg" alt="Tattoo 7"></div>
+      <div class="portfolio-item"><img src="assets/images/homepagepic/mp8.jpg" alt="Tattoo 8"></div>
+      <div class="portfolio-item"><img src="assets/images/homepagepic/mp9.jpg" alt="Tattoo 9"></div>
+      <div class="portfolio-item"><img src="assets/images/homepagepic/mp10.jpg" alt="Tattoo 10"></div>
 
     </div>
     
@@ -93,11 +91,12 @@
 
 
   <!-- ===== STUDIO PREVIEW ===== -->
-  <section id="studio">
+  <section id="studio-pic" id="studio">
     <h2>Studio</h2>
     <div class="preview">
+    <div class="preview-item"><img src="assets/images/homepagepic/studio.png" alt="Tattoo 1"></div>
       <p>Discover our creative space and setup.</p>
-      <a href="studio.html" class="btn">Explore Studio</a>
+      
     </div>
   </section>
 
@@ -105,7 +104,7 @@
   <section id="about-artist" class="about-artist">
     <div class="artist-container">
       <div class="artist-images">
-        <img src="assets/images/tatbg5.jpg" alt="Artist Portrait">
+        <img src="assets/images/homepagepic/artist.jpg" alt="Artist Portrait">
         <!-- Add more images if needed -->
       </div>
       <div class="artist-bio">
@@ -124,12 +123,88 @@
       <a href="booking.html" class="btn">Book Your Session</a>
     </div>
   </section>
-    
+      <!-- ===== FAQ SECTION ===== -->
+  <section id="faq" class="faq-section">
+    <h2>Frequently Asked Questions</h2>
 
-    <!-- ===== FOOTER ===== -->
-  <footer>
+    <div class="faq-item">
+      <button class="faq-question">How much does a tattoo cost?</button>
+      <div class="faq-answer">
+        <p>The cost of a tattoo depends on the size, style, and placement. Smaller tattoos may start at a few thousand rupees, while larger detailed pieces are priced higher. Contact us for a custom quote.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Does it hurt?</button>
+      <div class="faq-answer">
+        <p>Pain varies depending on placement and individual tolerance. Most clients describe it as a scratching sensation that is very manageable.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How long does it take to heal?</button>
+      <div class="faq-answer">
+        <p>Tattoos usually take 2–3 weeks to heal on the surface, but full healing can take up to 6 weeks. We’ll provide you with detailed aftercare instructions.</p>
+      </div>
+    </div>
+  </section>
+
+
+<!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Left Section -->
+    <div class="footer-about">
+      <img src="assets/images/logo.png" alt="Tattoo Stories Logo" class="footer-logo">
+      <p>
+        Tattoo Stories India is a tattoo studio that more than a studio it it itself is an art.
+      </p>
+      <p>
+        <i class="fas fa-phone"></i> <a href="tel:+916267034787">+91 6267034787</a>
+      </p>
+      <p>
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:tattoostoriesindia@gmail.com">tattoostoriesindia@gmail.com</a>
+      </p>
+      <p>
+        ghar 413,
+        sector - c
+        bhopal, madhya pradesh
+      </p>
+    </div>
+
+    <!-- Middle Section (Map) -->
+    <div class="footer-map">
+      <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3352.104711271184!2d77.41765277491773!3d23.19719877905166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c43a279c15d9d%3A0xf37e5e4a231182ed!2sThe%20Weddingraphers!5e1!3m2!1sen!2sin!4v1757534527576!5m2!1sen!2sin" 
+      width="200" 
+      height="200" 
+      style="border:0; border-radius:10px;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    </div>
+
+    <!-- Right Section (FAQs + Styles) -->
+    <div class="footer-links">
+      <h4>Tattoo Styles</h4>
+      <ul>
+        <li><a href="portfolio.html#realism">Realism</a></li>
+        <li><a href="portfolio.html#tribal">Tribal</a></li>
+        <li><a href="portfolio.html#geometric">Geometric</a></li>
+        <li><a href="portfolio.html#minimalist">Minimalist</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
     <p>© 2025 Tattoo Stories India. All Rights Reserved.</p>
+  </div>
   </footer>
+
 
   <!-- JS -->
   <script src="script.js"></script>
