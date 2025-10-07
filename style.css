@@ -102,14 +102,13 @@ header {
 
 /* ==== HERO SECTION ==== */
 .hero {
-  background-color: var(--bg-dark);
   position: relative;
   background: url('assets/images/tatbg6.jpg') center/cover no-repeat;
   height: 100vh;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding: 0px 0px;
+  padding: 40px 0px;
   text-align: center;
   z-index: 2;
   overflow: hidden;
@@ -257,6 +256,7 @@ header {
 /* ===== Portfolio Preview (Auto Slider) ===== */
 .portfolio-preview {
   padding: 80px 0px;  /* increased top-bottom padding */
+  
   color: #fff;
   text-align: center;
   position: relative;
@@ -311,6 +311,93 @@ header {
   100% { transform: translateX(-100%); }
 }
 
+
+/* ==== STUDIO PREVIEW ==== */
+#studio-pic {
+  padding: 40px 10px;
+  background: url('assets/images/homepagepic/studio-pic1.jpeg') center center / cover no-repeat fixed;
+  color: var(--primary-color);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+/*
+#studio-pic {
+  padding: 40px 10px;
+  background: linear-gradient(135deg, var(--bg-dark), var(--bg-mid));
+  color: var(--primary-color);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}*/
+
+#studio-pic h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--hover-accent);
+  position: relative;
+  z-index: 2;
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.preview-item {
+  width: 150%;
+  max-width: 1000px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+}
+
+.preview-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.preview-item:hover img {
+  transform: scale(1.03);
+}
+
+.preview p {
+  font-size: 1.1rem;
+  color: #FFD700;
+  max-width: 600px;
+  margin: 0 auto;
+  font-style: italic;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Optional ambient glow */
+#studio-pic::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.02), transparent);
+  z-index: 0;
+}
+#studio-pic h2,
+.preview,
+.preview-item,
+.preview p {
+  position: relative;
+  z-index: 2;
+}
+
+
 .about-artist {
   display: flex;
   flex-wrap: wrap;
@@ -363,9 +450,10 @@ header {
 }
 
 .contact-overlay {
+  background: url('assets/images/homepagepic/studio-pic1.jpeg') center center / cover no-repeat fixed;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 60px;
-  border-radius: 10px;
+  border-radius: 0px;
   display: inline-block;
 }
 
@@ -376,18 +464,161 @@ header {
 }
 
 .get-in-touch .btn {
-  background-color: #ff4c4c;
-  color: white;
+  background-color: #FFD700;
+  color: black;
   padding: 12px 30px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
 }
-
-.portfolio-section {
-  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
-  padding-bottom: 0rem;
+.get-in-touch .btn:hover {
+  background-color: black;  /* secondary color */
+  color: #FFD700;
+  border: 1px solid black;           /* text switches to gold */
+  cursor: pointer;           /* shows hand cursor */
+  transition: all 0.3s ease; /* smooth animation */
 }
+.get-in-touch .btn:hover:before,
+.get-in-touch .btn:hover:after {
+  background-color: black; /* only for get-in-touch button */
+}
+
+#rotating-word {
+  display: inline-block;
+  width: 150px;  /* adjust to fit your longest word */
+  text-align: left; /* centers the text inside */
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 60px 20px;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  text-align: left;
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+.faq-question {
+  width: 100%;
+  background: #222;
+  color: #fff;
+  padding: 15px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background: #333;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #1a1a1a;
+  color: #ddd;
+  padding: 0 15px;
+  border-left: 3px solid var(--primary-color);
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  border-radius: 0 0 8px 8px;
+}
+
+.faq-answer p {
+  margin: 10px 0;
+}
+
+
+
+.site-footer {
+  background: #111;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-about, 
+.footer-map, 
+.footer-links {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.footer-about p, 
+.footer-links ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-links h4 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: #FFD700;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+}
+
+.footer-map iframe {
+  border-radius: 8px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+
+
 /*portfolio.html*/
 /* ==== PARALLAX HERO ==== */
 .portfolio-parallax {
@@ -408,6 +639,11 @@ header {
   background: rgba(0, 0, 0, 0.3);
   padding: 2rem;
   border-radius: 10px;
+}
+
+.portfolio-section {
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+  padding-bottom: 0rem;
 }
 
 .portfolio-hero h1 {
@@ -648,8 +884,8 @@ footer {
 .booking-form {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(6px);
-  padding: 2.5rem;
-  border-radius: 14px;
+  padding: 2rem;
+  border-radius: 18px;
   max-width: 600px;
   width: 100%;
   margin: 2rem auto 0;   /* centers under heading */
@@ -913,39 +1149,6 @@ footer {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 768px) {
   /* Navbar */
   .navbar {
@@ -1028,8 +1231,3 @@ footer {
     font-size: 1rem;
   }
 }
-
-
-
-
-
